@@ -19,5 +19,5 @@ RUN a2enmod rewrite
 RUN git clone https://github.com/narendraqa/myfirstproject.git /var/www/html
 RUN chown -R www-data:www-data /var/www/html
 EXPOSE 80
-CMD apachectl -D FOREGROUND
+CMD apachectl -D FOREGROUND > /dev/null 2>&1
 
